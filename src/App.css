@@ -1,38 +1,219 @@
 .App {
   text-align: center;
 }
+.navbar{
+  color: #ffffff;
+  font-size: 30px;
+  font-weight : 600;
+  padding-bottom: 10px;
+  text-align: center;
+  text-decoration: none;
+  background-color: black;
+  width: 100%;
+}
+.Head{
+  background-image: linear-gradient(to right, #9632a7, #0f7895);
+  height: 140px;
+  
+}
+.searchBar{
+  margin-top: 40px;
+  border: none;
+  height: 30%;
+  width: 50%;
+  border-radius: 10px;
+}
 
-.App-logo {
-  height: 40vmin;
+.title{
+  color: #93c5fd;
+  font-size: 30px;
+  font-weight : 600;
+  margin-bottom: 10px;
+}
+
+.genre{
+  margin-top: 10px;
+  text-align: center;
+  margin-left: 15%;
+  margin-right: 15%;
+  width: 70%;
+}
+
+.genre-list{
+    margin-top: 20px;
+    color: white;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    margin-right: 15px;
+    background-color: #1e293b;
+}
+
+.genre-list:hover{
+  background-color: #ffffff;
+  color: #10141e;
+}
+.Movie-list{
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.movi{
+  display: inline-block;
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+  padding: 2%;  
+  margin-bottom: 55px;
+}
+
+.movi:hover {
+  background-color: #1f2124;
+  cursor: pointer;
+}
+
+
+.movi-name {
+  color: #ffffff;
+  text-align: center;
+}
+
+.full{
+    margin-top: 30px;
+    margin-left: 20%;
+    margin-right: 20%;
+    width: 900px;
+    display: grid;
+    align-items: center; 
+    text-align: center;
+ grid-template-columns: 1fr 1fr 1fr;
+}
+.full-img{  
+  margin-right: 30px;
+  height: 600px;
+  width: 500px;
+}
+.full-text{
+  display: inline;
+  color: #ffffff;
+  height: 600px;
+  width: 500px;
+}
+
+.name{
+  color: #93c5fd;
+  font-size: 60px;
+  font-weight : 600;
+  margin-bottom: 10px;
+}
+
+.genres{
+  margin-left: 10px;
+}
+
+.premier{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.update{
+  margin-top: 40px;
+  background: #93c5fd;
+  border-radius: 999px;
+  box-shadow: #93c5fd 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #1f2124;
+  cursor: pointer;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+  margin-left: 50px;
+}
+
+
+
+.input-container {
+  height: 50px;
+  position: relative;
+  width: 100%;
+}
+
+.ic1 {
+  margin-top: 40px;
+}
+
+.ic2 {
+  margin-top: 30px;
+}
+
+.input {
+  background-color: #303245;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  font-size: 18px;
+  height: 100%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 100%;
+}
+
+.cut {
+  background-color: #10141e;
+  border-radius: 10px;
+  height: 20px;
+  left: 20px;
+  position: absolute;
+  top: -20px;
+  transform: translateY(0);
+  transition: transform 200ms;
+  width: 76px;
+}
+
+.cut-short {
+  width: 50px;
+}
+
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut {
+  transform: translateY(8px);
+}
+
+.placeholder {
+  color: #65657b;
+  font-family: sans-serif;
+  left: 20px;
+  line-height: 14px;
   pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  transition: transform 200ms, color 200ms;
+  top: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+  transform: translateY(-30px) translateX(10px) scale(0.75);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.input:not(:placeholder-shown) ~ .placeholder {
+  color: #93c5fd;
 }
 
-.App-link {
-  color: #61dafb;
+.input:focus ~ .placeholder {
+  color: #93c5fd;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
